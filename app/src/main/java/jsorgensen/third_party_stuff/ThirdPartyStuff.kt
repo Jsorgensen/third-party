@@ -15,8 +15,16 @@ class ThirdPartyStuff : AppCompatActivity() {
         val text = findViewById<TextView>(R.id.txtMessage);
         val edit = findViewById<EditText>(R.id.edtMessage);
         val button = findViewById<Button>(R.id.btnMessage);
-        button.setOnClickListener{
+        button.setOnClickListener {
             text.setText(edit.text);
         }
+
+        val txtFamily = findViewById<TextView>(R.id.txtFamily);
+
+        val gson = GsonExplore();
+        txtFamily.setText(gson.myFamily.asString())
+
+        val jsonText = findViewById<TextView>(R.id.txtJson)
+        jsonText.setText(gson.json);
     }
 }
