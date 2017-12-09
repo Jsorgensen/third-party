@@ -1,6 +1,7 @@
 package jsorgensen.third_party_stuff;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.util.Arrays;
 
@@ -32,4 +33,9 @@ public class GsonExplore {
 
     Gson gson = new Gson();
     String json = gson.toJson(myFamily);
+    Gson gsonPretty = new GsonBuilder().setPrettyPrinting().create();
+    String jsonPretty = gsonPretty.toJson(myFamily);
+
+    String input = "{\"father\":\"Scott\",\"kids\":[\"Halley\",\"Jane\"],\"mother\":\"Michelle\",\"happy\":true,\"years\":5}";
+    Family copyFamily = gson.fromJson(input, Family.class);
 }

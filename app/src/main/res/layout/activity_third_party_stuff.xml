@@ -1,42 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="jsorgensen.third_party_stuff.ThirdPartyStuff">
 
-    <TextView
-        android:id="@+id/txtMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Input Message and Press Button"/>
-
-    <EditText
-        android:id="@+id/edtMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Enter Text"/>
-
-    <Button
-        android:id="@+id/btnMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Display Message"/>
-
-    <TextView
-        android:id="@+id/txtFamily"
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120px"
-        android:text="Family" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/txtJson"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Json"
-        android:layout_marginTop="120px"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="40px">
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/txtMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Input Message and Press Button"/>
+
+            <EditText
+                android:id="@+id/edtMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Enter Text"/>
+
+            <Button
+                android:id="@+id/btnMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Display Message"/>
+
+            <TextView
+                android:id="@+id/txtFamily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120px"
+                android:text="Family" />
+
+            <TextView
+                android:id="@+id/txtJson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Json"
+                android:layout_marginTop="120px"/>
+
+            <TextView
+                android:id="@+id/txtCopy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Copy Text"
+                android:layout_marginTop="60px"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</ScrollView>

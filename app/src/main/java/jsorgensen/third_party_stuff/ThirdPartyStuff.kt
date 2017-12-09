@@ -22,9 +22,14 @@ class ThirdPartyStuff : AppCompatActivity() {
         val txtFamily = findViewById<TextView>(R.id.txtFamily);
 
         val gson = GsonExplore();
-        txtFamily.setText(gson.myFamily.asString())
+        txtFamily.setText(gson.myFamily.asString());
 
         val jsonText = findViewById<TextView>(R.id.txtJson)
-        jsonText.setText(gson.json);
+        jsonText.setText(gson.json + "\n" + gson.jsonPretty);
+
+        val txtCopy = findViewById<TextView>(R.id.txtCopy);
+        val copyText = gson.copyFamily.asString();
+        txtCopy.setText(copyText);
+
     }
 }
